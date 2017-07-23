@@ -1,0 +1,422 @@
+/*============ Start light color css ==============*/
+.wel-section{
+    .col-left,.col-right{
+        justify-content: center;
+        @media (min-width:992px){
+            height: 100vh;
+        }
+    }
+}
+.col-left,.col-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.col-left{
+    position: relative;
+    padding-top: 120px;
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        height: 100%;
+        width: 2000px;
+        border-top: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        background-color: #fafbfb;
+    }
+}
+.bg-color{
+    .col-left{
+        &:before{
+            background: #f6f7f7;
+        }
+    } 
+    .col-right{
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            left: 16px;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100vw;
+            background-color: #fdfdfd;
+        }
+    }
+}
+@media (min-width: 992px){
+    .col-left::before{
+        right: -16px;
+        border: none;
+        transform: none;
+    }
+    .display-f{
+        display: flex;
+    }
+}
+
+.col-right{
+    padding-left: 98px;
+    position: relative;
+}
+/*============ End light color css ==============*/
+
+/*========= Start wel-section css ============*/
+.wel-social{
+    margin-top: 40px;
+    a{
+        color: #aaaaaa;
+        transition: color 0.25s ease;
+        font-size: 20px;
+        margin-left: 16px;
+        &:hover{
+            color: $yellow;
+        }
+    }
+}
+.wel-content{
+    font-family: $pop;
+}
+.hello-t{
+    font-size: 20px;
+    font-weight: 300;
+    color: #999;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    padding-left: 2px;
+}
+.name-t{
+    font-size:70px;
+    line-height: 80px;
+    color: #18979f;
+    text-transform: uppercase;
+    font-weight: 300;
+    span{
+        font-weight: 600;
+    }
+}
+.expart-n{
+    padding-top: 20px;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 34px;
+    color: $l-gray;
+    padding-left: 2px;
+}
+.header-contact-infos{
+    border-top: 1px solid #eeeeee;
+    position: absolute;
+    bottom: 0;
+    left: 98px;
+}
+.header-contact-info{
+    font: 400 15px $open;
+    color: #999;
+    text-decoration: none;
+    display: inline-block;
+    padding: 33px 0px;
+    transition: all 0.4s linear;
+    i{
+        padding-right: 10px;
+    }
+    &:hover,&:focus{
+        color: $yellow;
+    }
+    & + .header-contact-info{
+        padding-left: 60px;
+    }
+}
+/*========= End wel-section css ============*/
+
+
+
+/*--------------- Start dark-bg color css --------------*/
+.dark-bg{
+    .col-left{
+        &:before{
+            background: #2b2c2c;
+            border-color: #2b2c2c;
+        }
+    } 
+    .col-right{
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            left: 16px;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100vw;
+            background-color: #2d2e2e;
+        }
+    }
+    &.bg-color{
+        .col-left{
+            &:before{
+                background: #292a2a;
+            }
+        } 
+        .col-right{
+            &:before{
+                background-color: #2b2c2c;
+            }
+        }
+    }
+}
+/*============ End dark-bg color css ==============*/
+
+/*========= Start dark wel-section css ============*/
+.dark-bg{
+    .wel-social a{
+        color: $l-gray;
+        &:hover{
+            color: $yellow;
+        }
+    }
+    .wel-content{
+        .header-contact-infos{
+            border-color: #444;
+        }
+    }
+}
+/*========= End dark wel-section css ============*/
+
+
+/*=================== Start hero-section css ================*/
+.hero-section{
+    position: relative;
+    padding-top: 75px;
+    .static{
+        position: static;
+    }
+}
+.hero-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 33%;
+    .hello-t{
+        color: $l-gray;
+        padding-bottom: 8px;
+    }
+    .name-t{
+        color: $darkturquoise;
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .expart-n{
+        font-weight: 500;
+        padding-top: 9px;
+        color: #555;
+    }
+    p{
+        color: #555;
+        font: 400 15px/32px $pop;
+        padding-left: 2px;
+        padding-top: 50px;
+        padding-bottom: 44px;
+    }
+    .downlod-btn{
+        font: 600 16px/28px $open;
+        color: $yellow;
+        text-transform: uppercase;
+        padding: 0px;
+        i{
+            padding-left: 10px;
+            transition: all 0.9s linear;
+        }
+        span{
+            position: relative;
+            &:before{
+                content: attr(data-letters);
+                position: absolute;
+                color: #555;
+                left: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 0%;
+                -webkit-transition: width 0.6s;
+                transition: width 0.6s;
+                -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+                transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+            }
+        }
+        &:hover{
+            i{
+                color: #555;
+            }
+            span{
+                &:before{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+/*=================== End hero-section css ================*/
+
+
+.dk-bg{
+    background: #2d2e2e;
+    .hero-content{
+        .hello-t{
+            color: #999;
+        }
+        .expart-n{
+            color: $l-gray;    
+        }
+        p{
+            color: $l-gray;  
+        }
+        .downlod-btn{
+            color: #999;
+            span{
+                &:before{
+                    color: $yellow;
+                }
+            }
+            &:hover{
+                i{
+                    color: $yellow;
+                }
+            }
+        }
+    } 
+}
+.section-title.dk-gray-sec{
+    h2{
+        color: #999;
+    }
+    p{
+        color: #666;
+    }
+}
+
+
+.hero-wrap{
+    padding-left: 80px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: -webkit-linear-gradient(left, #fafbfb 36%, #fff 36%);
+    position: relative;
+    z-index: 5;
+    .hero_content{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .header-contact-infos{
+            position: relative;
+            padding-top: 40px;
+            left: 0;
+            border: 0px;
+            .header-contact-info{
+                display: block;
+                padding: 12px 0px;
+            }
+        }
+    }
+    .bg_img{
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        img{
+            vertical-align: bottom;
+        }
+    }
+}
+
+.example{
+    padding-left: 80px;
+    width: 100%;
+    overflow: hidden;
+    background-image: -webkit-linear-gradient(left, #fafbfb 36%, #fff 36%);
+    position: relative;
+    z-index: 5; 
+    .rev_slider{
+        ul{
+            li{
+               .text_h2{
+                   span{
+                       
+                   }
+                } 
+            }
+        }
+    }
+    
+}
+
+
+.fixed-column {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36%;
+    height: 100%;
+    padding-left: 80px;
+    z-index: 4;
+    -webkit-transform: translate3d(0,0,0);
+    overflow: hidden;
+    .fl-wrap{
+        float: left;
+        width: 100%;
+        position: relative;
+        height: 100%;
+        .bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-attachment: scroll;
+            background-position: center;
+            background-repeat: repeat;
+            background-origin: content-box;
+            transition: all 0.5s linear;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.2;
+        }
+    }
+    .bg-title {
+        position: absolute;
+        bottom: -17%;
+        left: 45%;
+        font-size: 80px;
+        width: 100%;
+        min-height: 300px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: $pop;
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        color: #fff;
+        line-height: 140px;
+        span{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+

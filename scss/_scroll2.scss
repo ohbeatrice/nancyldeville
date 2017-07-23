@@ -1,0 +1,63 @@
+.column-wrap{
+    float: right;
+    width: 64%;
+    position: relative;
+    section{
+        min-height: 100vh;
+        display: flex;
+        padding-left: 82px;
+    }
+    .container{
+        max-width: 765px;
+        width: 100%;
+        margin: 0 auto 0px 0px;
+        padding: 0px;
+        justify-content: center;
+        align-self: center;
+        vertical-align: middle;
+    }
+    .scroll-nav-holder{
+        display: none;
+    }
+} 
+.scroll-con-sec{
+    .sec-title{
+        text-align: left;
+        padding-bottom: 49px;
+        h2{
+            &:before{
+                left: 0;
+                right: auto;
+            }
+        }
+        h6{
+            margin-left: 0px;
+        }
+    }
+    .header-contact-info{
+        & + .header-contact-info{
+            padding-left: 55px;
+        }
+    }
+    &.awards_sec{
+        .sec-title{
+            padding-bottom: 0px;
+        }
+    }
+    .blog-item .text{
+        background: #fff;
+    }
+    &.dk-bg{
+        .contact-form{
+            .form-group{
+                .form-control{
+                    background: transparent;
+                    border-color: #282828;
+                }
+            } 
+        }
+        .contact-infos{
+            border: 0px;
+        }
+    }
+}

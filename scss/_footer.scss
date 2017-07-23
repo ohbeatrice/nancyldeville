@@ -1,0 +1,121 @@
+/*------------ Start footer css -------------*/
+.footer-area{
+    .col-left{
+        padding-top: 0px;
+    }
+    .sec-title{
+        padding-top: 0px;
+        h6{
+            font-size: 14px;
+            line-height: 83px;
+            font-style: normal;
+        }
+    }
+}
+.f-right{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.footer-links{
+    align-self: center;
+    a {
+        display: block;
+        float: left;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #999999;
+        transition: color 0.25s ease;
+        &:hover{
+            color: $yellow;
+        }
+        & + a{
+            margin-left: 40px;
+        }
+    }
+}
+.footer-social{
+    align-self: center;
+    a{
+        font-size: 18px;
+        color: #aaaaaa;
+        transition: color 0.25s ease;
+        &:hover{
+            color: $yellow;
+        }
+        & + a{
+            margin-left: 15px;
+        }
+    }
+}
+/*------------ End footer css -------------*/
+/*==========Start footer-area2 css =============*/
+.footer-area2{
+    text-align: center;
+    background: #323232;
+    color: rgba(255,255,255, 0.30);
+}
+.footer-top{
+    padding: 120px 0px 70px;
+    .f-logo{
+        font-family: 'Dancing Script', cursive;
+        font-size: 50px;
+        color: #999;
+    }
+    p{
+        line-height: 32px;
+        max-width: 565px;
+        margin: 36px auto 42px;
+    }
+    .f-social{
+        li{
+            display: inline-block;
+            padding: 0px 3px;
+            a{
+                font-size: 18px;
+                color: rgba(255, 255, 255, 0.50);
+                width: 48px;
+                height: 48px;
+                background: #282828;
+                text-align: center;
+                line-height: 48px;
+                display: block;
+                border-radius: 50%;
+                transition: all 0.4s linear;
+                &:hover{
+                    background: $yellow;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.footer-bottom{
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 21px 0px;
+    a{
+        color: rgba(255,255,255, 0.30);
+        transition: all 0.4s linear;
+        &:hover{
+            color: $yellow;
+        }
+    }
+}
+/*==========End footer-area2 css =============*/
+
+
+.footer-area3{
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    .bg-color .col-right:before{
+        left: 33px;
+    }
+    @media (min-width:992px){
+        .col-left::before{
+            right: -33px;
+        }
+    }
+}
+

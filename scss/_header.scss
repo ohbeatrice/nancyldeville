@@ -1,0 +1,578 @@
+/*=========== pre-loader css =============*/
+.loader-container {
+    position: fixed;
+    float: left;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: #2d2e2e;
+    z-index: 999999;
+}
+.loader-container .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+#mask {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    svg{
+        width: 64px;
+        height: 76px;
+        .preloader-path {
+            stroke-linejoin: round;
+            fill: none;
+            stroke: $yellow;
+            stroke-width: 1;
+            stroke-dasharray: 70 32;
+            -webkit-animation: preloader 1s infinite ease;
+            animation: preloader 1s infinite ease;
+        }
+    }
+}
+
+@-webkit-keyframes preloader {
+  from {
+    stroke-width: 0;
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-width: 1;
+    stroke-dashoffset: 102px;
+  }
+}
+@keyframes preloader {
+  from {
+    stroke-width: 0;
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-width: 1;
+    stroke-dashoffset: 102px;
+  }
+}
+
+/*============ Start header area css ===============*/
+@media (min-width: 768px){
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .header-logo{
+        float: left;
+    }
+}
+.navbar{
+    margin: 0px;
+    box-shadow: none;
+    border: 0px;
+    background: transparent;
+    border-radius: 0px;
+    padding: 0px 25px;
+    transition: all 0.2s ease;
+    z-index: 99;
+}
+.navbar-header{
+    .navbar-toggle{
+        position: relative;
+        z-index: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        transition: all 0.25s ease;
+        padding: 29px 0px;
+        border: 0px;
+        margin-bottom: 0px;
+        z-index: 2;
+        .icon-bar{
+            background-color: #999999;
+            width: 35px;
+            transition: all 0.25s ease;
+            + .icon-bar{
+                margin-top: 8px;
+            }
+            &:nth-child(1){
+                transform: rotate(45deg);
+                transform-origin: 10% 10%;
+            }
+            &:nth-child(2){
+                opacity: 0;
+            }
+            &:nth-child(3){
+                transform: rotate(-45deg);
+                transform-origin: 10% 90%;
+            }
+        }
+        &.collapsed{
+            .icon-bar{
+                &:nth-child(1){
+                    transform: none;
+                }
+                &:nth-child(2){
+                    opacity: 1;
+                }
+                &:nth-child(3){
+                    transform: none;
+                }
+            }
+        }
+        &:hover,&:focus{
+            background: transparent;
+        }
+    }
+    .navbar-brand{
+        height: auto;
+        line-height: 80px;
+        display: block;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        transition: all 0.25s ease;
+        img{
+            display: inline-block;
+        }
+    }
+}
+.navbar-collapse{
+    float: right;
+    position: fixed;
+    z-index:0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fafbfb;
+    max-height: none !important;
+    height: auto !important;
+    overflow-x: hidden;
+    transform: translateX(100%);
+    transition: all 0.35s ease;
+    .menu{
+        transition: padding-top 0.25s ease;
+        margin-top: 0;
+        margin-bottom: 0;
+        overflow-y: scroll;
+        height: 100%;
+        padding-top: 50px;
+        width: 321px;
+        li{
+            display: block;
+            float: none;
+            a{
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
+                text-transform: uppercase;
+                font-size: 14px;
+                color: #666666;
+                padding-left: 55px;
+                transition: all 0.3s linear;
+                &:hover,&:focus{
+                    background: none;
+                    color: $yellow;
+                }
+            }
+            &.nav-lang{
+                margin-top: 66px;
+                padding-left: 40px;
+                padding-bottom: 40px;   
+                a{
+                    display: inline-block;
+                    font-size: 15px;
+                    font-weight: 400;
+                    padding-left: 15px;
+                    color: #999999;
+                    transition: all 0.3s linear;
+                    &:hover{
+                        background: none;
+                        color: $yellow;
+                    }
+                    & + a{
+                        margin-left: 15px;
+                    }
+                    &.active{
+                        color: #777777;
+                        transition: all 0.3s linear;
+                        &:hover{
+                            background: none;
+                            color: $yellow;
+                        }
+                    }
+                }
+            }
+            &.active{
+                a{
+                    background: transparent;
+                    box-shadow: none;
+                    &:hover,&:focus{
+                        background: transparent;
+                        color: $yellow;
+                    }
+                }
+                
+            }
+        }
+    }
+    &.in{
+        transform: none;
+        box-shadow: 0px 0px 10px 0px rgba(5, 5, 5, 0.1);
+    }
+}
+
+.header-dark{
+    .navbar-collapse .menu{
+        background: rgba(0, 0, 0, 0.9);
+        li{
+            a{
+                color: #999;
+                &:hover{
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}
+/*============ End header area css ===============*/
+
+/*=============Start header-blue css ============*/
+.header-full{
+    .burger-icon{
+        .icon-bar{
+            background: #999;
+        }
+    } 
+}
+.header-social{
+    margin: 0px;
+    li{
+        a{
+            font-size: 20px;
+            color: #c3c1c1;
+            text-shadow: none;
+            padding: 0px 0px 0px 20px;
+            line-height: 80px;
+            &:hover,&:focus{
+                background: none;
+                color: $yellow;
+            }
+        }
+    }
+}
+
+
+
+/*=========== header3 area css ===========*/
+.header3{
+    padding: 0px 45px;
+    transition: all 300ms linear;
+    border: none !important;
+    .social-icon{
+        float: left;
+        ul{
+            li{
+                display: inline-block;
+                a{
+                    font-size: 18px;
+                    color: #fff;
+                    line-height: 80px;
+                    display: inline-block;
+                    transition: all 0.20s linear;
+                }
+                & + li{
+                    padding-left: 16px;
+                }
+            }
+        }
+    }
+}
+.burger-icon{
+    float: right;
+    text-align: right;
+    width: 35px;
+    height: 80px;
+    cursor: pointer;
+    padding-top: 18px;
+    transition: all 0.20s linear;
+    .icon-bar{
+        width: 35px;
+        height: 2px;
+        background: #fff;
+        display: block;
+        margin-top: 8px;
+        float: right;
+        right: 0;
+        transition: all 300ms linear;
+    }
+}
+.canvas-menu{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    padding: 50px;
+    &.mySideBar {
+        opacity: 1;
+        visibility: visible;
+        .menu{
+            li{
+                opacity: 1;
+                animation: fadeInLeft .4s cubic-bezier(.175,.885,.32,1) both;
+            }
+        }
+    }
+    .menu{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        width: 100%;
+        left: 0;
+        li{
+            display: block;
+            opacity: 0;
+            a{
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 15px;
+                color: #999;
+                padding-left: 55px;
+                transition: all 0.3s linear;
+                padding: 6px 15px;
+                display: inline-block;
+                &:hover,&:focus{
+                    background: none;
+                    color: $yellow;
+                }
+            }
+            .current{
+               color: $yellow; 
+            }
+        }
+    }
+    .header-inner{
+        .nav-logo{
+            display: inline-block;
+        }
+        .close{
+            color: #666;
+            opacity: 1;
+            text-shadow: 0 1px 0 #666;
+        }
+    }
+}
+
+
+
+
+/*============ main_header area css ===========*/
+
+.main_header{
+    position: fixed;
+    width: 80px;
+    height: 100%;
+    background: #383838;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate3d(0,0,0);
+    .nav-button{
+        width: 32px;
+        height: 32px;
+        margin-top: 30px;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+        .menu-global{
+            backface-visibility: hidden;
+            position: absolute;
+            left: 0;
+            border-top: 2px solid #999999;
+            width: 100%;
+            transition: 0.55s;
+            &.menu-top{
+                top: 0;
+            }
+            &.menu-middle{
+                top: 10px;
+            }
+            &.menu-bottom{
+                top: 20px;
+            }
+        }
+        &.actives{
+            .menu-top{
+                backface-visibility: hidden;
+                top: 10px;
+                transform: rotate(45deg);
+                transition: 0.55s 0.2s;
+            }
+            .menu-middle{
+                opacity: 0;
+            }
+            .menu-bottom{
+                backface-visibility: hidden;
+                top: 10px;
+                transform: rotate(-405deg);
+                transition: 0.55s 0.2s;
+            }
+        }
+    }
+    .social_icon{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        a{
+            font-size: 20px;
+            color: #aaaaaa;
+            float: left;
+            width: 100%;
+            line-height: 37px;
+            &:hover{
+                color: $yellow;
+            }
+        }
+    }
+}
+/*============ main_header area css ===========*/
+
+
+/*============= left_offcanvas_menu  ===========*/
+.left_offcanvas_menu{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 9;
+    max-width: 370px;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    background: rgba(56, 56, 56, 0.95);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(-370px,0,0);
+    transition: 0.45s 0.2s;
+    .menu-logo{
+        margin-top: 100px;
+        display: block;
+    }
+    .left_inner{
+        min-height: 100vh;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        .menu{
+            margin-top: 100px;
+            li{
+                a{
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    color: #999; 
+                    padding: 5px;
+                    display: block;
+                    &:hover{
+                        background: transparent;
+                        color: $yellow;
+                    }
+                    &.current{
+                        color: $yellow;
+                    }
+                }
+            }   
+        }
+    }
+    .lng{
+        position: absolute;
+        bottom: 80px;
+        width: 100%;
+        a{
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 400;
+            padding-left: 15px;
+            color: #999999;
+            transition: all 0.3s linear; 
+        }
+    }
+    &.mySideBar{
+        opacity: 1;
+        transform: translate3d(80px,0,0);
+        visibility: visible;
+        .menu{
+            li{
+                opacity: 1;
+                animation: fadeInLeft 0.4s cubic-bezier(0.175, 0.885, 0.32, 1) both;
+            }
+        }
+    }
+}
+.offcanvas_closer {
+    position: fixed;
+    display: block;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+    transition: all 300ms linear 0s;
+    &.mySideBar{
+        z-index: 6;
+        opacity: 1;
+    }
+}
+/*============= left_offcanvas_menu  ===========*/
+
+/*============ sticky menu css ==============*/
+
+.navbar{
+    &.affix{
+        background: #fff;
+        left: 0;
+        z-index: 1040;
+        top: 0;
+        box-shadow: 0px 1px 5px 0px rgba(21, 47, 95, 0.2);
+        &.header-dark{
+            background: #252525;
+            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+        }
+        .navbar-header{
+            .navbar-brand{
+                line-height: 60px;
+            }
+            .navbar-toggle{
+                padding: 19px 0px;
+            }
+        } 
+        .burger-icon{
+            height: 60px;
+            padding-top: 10px;
+            .icon-bar{
+                background: #999;
+            }
+        }
+    }
+    &.header3{
+        &.affix{
+            padding: 0px 45px;
+            .social-icon ul li a{
+                color: $l-gray;
+                line-height: 60px;
+            }
+        }
+    }
+}

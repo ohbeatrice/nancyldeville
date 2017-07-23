@@ -1,0 +1,50 @@
+/*----------------------------------------------------
+@File: Default Styles
+@Author: Md. Shahadat Hussain
+@URL: https://themeforest.net/user/droitthemes
+
+This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+---------------------------------------------------- */
+/*=====================================================================
+@Template Name: Smith
+@Author: Md. Shahadat Hussain
+@Developed By: Rony
+@Developer URL: https://themeforest.net/user/droitthemes
+
+@Default Styles
+
+Table of Content:
+01/ variables
+02/ predefine
+03/ header
+04/ slider
+05/ about
+06/ scroll
+07/ portfolio
+08/ services
+09/ blog
+10/ contact
+11/ footer 
+=====================================================================*/
+
+/*-------- fonts --------*/
+$pop: 'Poppins', sans-serif;
+$open: 'Open Sans', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+/*========== color variables ==========*/
+$yellow: #f1b200;
+$gray: #777777;
+$l-gray: #666;
+
+// Placeholder Mixins
+
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}

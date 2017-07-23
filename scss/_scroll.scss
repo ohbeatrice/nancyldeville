@@ -1,0 +1,235 @@
+.col-avatar{
+    width: calc(50% - 135px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    float: left;
+    .prot-image{
+        height: 100%;
+        .avatar{
+            height: 100%;
+        }
+    }
+}
+.sc-wel-section{
+    .frame{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100%;
+        position: relative;
+    }
+}
+.wrapper{
+    width: calc(50% + 135px);
+    float: right;
+    .frame{
+        max-width: 880px;
+        padding: 90px 0px 90px 80px;
+    }
+}
+#fp-nav{
+    &.right{
+        right: 33px;
+    }
+    ul{
+        li{
+            width: 100%;
+            height: 100%;
+            margin: 10px 7px;
+            a{
+                width: 16px;
+                height: 16px;
+                border: 1px solid #bdbdbd;
+                border-radius: 50%;
+                span{
+                    background: transparent;
+                    width: 8px;
+                    height: 8px;
+                    margin:-4px 0px 0px -4px;
+                }
+                &:hover{
+                    border-color: $yellow;
+                    span{
+                        background: $yellow;
+                        width: 8px;
+                        height: 8px;
+                        margin:-4px 0px 0px -4px;
+                    }
+                }
+                &.active{
+                    border-color: $yellow;
+                    span{
+                        background: $yellow;
+                        width: 8px;
+                        height: 8px;
+                        margin:-4px 0px 0px -4px;
+                    }
+                    &:hover{
+                        border-color: $yellow;
+                        span{
+                            background: $yellow;
+                            width: 8px;
+                            height: 8px;
+                            margin:-4px 0px 0px -4px;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
+
+/*============Start sc-about css =============*/
+.sc-about,.sc-skills{
+    .sec-title2{
+        padding-bottom: 36px;
+    }
+}
+/*============Start sc-awards css =============*/
+.sc-awards{
+    .sec-title2{
+        padding-bottom: 0px;
+    }
+    .award-item{
+        margin-top: 47px;
+    }
+}
+/*============Start sc-profile css =============*/
+.sc-profile{
+    .sec-title2{
+        padding-bottom: 0px;
+    }
+    .col-profile {
+        margin-top: 50px;
+        padding-bottom: 22px;
+    }
+}
+/*============Start sc-portfolio css =============*/
+.sc-portfolio{
+    .sec-title2{
+        padding-bottom: 40px;
+    }
+    .portfolio-filter{
+        padding-bottom: 24px;
+    }
+}
+/*============Start sc-blog css =============*/
+.sc-blog{
+    .blog-item{
+        .text{
+            background: #fafafa;
+        }
+    }
+}
+/*============Start sc-contact css =============*/
+.sc-contact{
+    .sec-title2{
+        padding-bottom: 41px;
+    }
+    .contact-infos{
+        margin-top: 0px;
+        border: 0px;
+        margin-bottom: 35px;
+        .header-contact-info{
+            padding-top: 0px;
+        }
+    }
+}
+
+/*============ home 4 dark css ===========*/
+.dk-bg{
+    .title{
+        color: #777;
+        &:hover{
+            color: $yellow;
+        }
+    }
+    .sec-title2{
+        h2{
+            color: #999;
+        }
+        h6{
+            color: #777;
+        }
+    }
+    .sc-about{ 
+        .about-content{
+            p{
+                color: #999;
+            }
+        }
+    }
+    .sc-skills{
+        .skill-content{
+            p{
+                color: #999;
+            }
+        }
+        .progress-element .skill-info .skill-name{
+            color:#999;
+        }
+    }
+    .sc-expertise{
+        .expertise-media .media-body p{
+            color: #999;
+        }
+    }
+    .sc-experience,.sc-education{
+        .ex-content{
+            p{
+                color: #999;
+            }
+        } 
+    }
+    .sc-awards{
+        p{
+            color: #999;
+        } 
+    }
+    .sc-portfolio{
+       .portfolio-filter li{
+            color: #999;
+           &:hover{
+               color: $yellow;
+           }
+        } 
+    }
+    .sc-profile{
+        p{
+            color: #999;
+        }
+    }
+    .sc-testimonial{
+        .testimonial-item p{
+            color: #999;
+        }   
+    }
+    .sc-blog{
+        .blog-item .title{
+            color: #191b1d;
+            &:hover{
+                color: $yellow;
+            }
+        }
+    }
+    .sc-contact{
+        .contact-form .form-group{
+            label{
+                color: #999;
+            }
+            .form-control{
+                background: #363737;
+                border-color: #363737;
+                color: #999;
+                @include placeholder{
+                    color: #666666;
+                }
+            }
+        } 
+    }
+    
+}
+

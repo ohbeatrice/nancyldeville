@@ -1,0 +1,238 @@
+/*========= Start blog-section css ============*/
+.blog-carousel{}
+.blog-item{
+    .blog-thumb{
+        display: block;
+        height: 240px;
+        img{
+            transition: all 0.4s linear;
+        }
+    }
+    .blog-date{
+        font: 400 14px $open;
+        color: #999;
+        font-style: italic;
+        padding-bottom: 18px;
+    }
+    .title{
+        color:#191b1d;
+        padding-bottom: 16px;
+        text-transform: capitalize;
+        transition: all 0.4s linear;
+    }
+    p{
+        line-height: 28px;
+    }
+    .text{
+        padding: 33px 35px;
+    }
+    &:hover{
+        .title{
+            color: $yellow;
+        }
+        img{
+            transform: scale(1.1);
+        }
+    }
+}
+/*========= End blog-section css ============*/
+
+/*===========Start blog-area css ===========*/
+.blog-area{
+    background: #f8f8f8;
+}
+.blog-2-item{
+    font-family: $pop;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 8px 0px rgba(74, 76, 75, 0.08);
+    margin-top: 5px;
+    .blog-img{
+        display: block;
+        height: 265px;
+    }
+    .content{
+        padding: 35px 61px 60px 30px;
+        h4{
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 40px;
+            color: #4c4949;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            position: relative;
+            &:before{
+                content: "";
+                width: 37px;
+                height: 2px;
+                background: $yellow;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        h2{
+            font-size: 18px;
+            line-height: 30px;
+            color: #272525;
+            text-transform: uppercase;
+            padding-top: 13px;
+            padding-bottom: 2px;
+            transition: all 0.5s linear;
+            &:hover{
+                color: $yellow;
+            }
+        }
+        h5{
+            font-size: 14px;
+            line-height: 30px;
+            color: #5f5a5a;
+            font-weight: 400;
+            span{
+                color: #999999;
+                padding-left: 12px;
+                font-style: italic;
+            }
+        }
+        p{
+            font:400 15px/28px $open;
+            color: #706b6b;
+            padding-top: 16px;
+        }
+    }
+}
+/*===========End blog-area css ===========*/
+
+.blog-two-area{
+    background: $yellow;
+    padding: 134px 0px 140px;
+    .blog-carousel2{
+        .blog-item{
+            .text{
+                background: #fff;
+            }
+        }
+        .owl-dots {
+            margin-top: 70px;
+            .owl-dot{
+                background: #f5c94d;
+                &.active{
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+
+/*------------Start dark testimonials css ----------*/
+.dark-bg{
+    .blog-item .text{
+        background: #444444;
+        .title{
+            color: #ccc;
+        }
+        .sec-p{
+            color: #aaa;
+        }
+        &:hover{
+            .title{
+                color: $yellow;
+            }
+        }
+    }
+}
+/*------------End dark testimonials css ----------*/
+
+/*============= start clients css ============*/
+.clients{
+    .sec-pad{
+        padding-top: 70px;
+    }
+    .clients-slider{
+        .client-logo{
+            margin-top: 60px;
+        }
+    }
+}
+.clients-slider{
+    .client-logo{
+        margin-top: 60px;
+        a{
+            display: block;
+            img{
+                max-width: 100%;
+                width: auto;
+                opacity: 0.4;
+                transition: opacity 0.5s ease;
+            }
+            &:hover,&:focus{
+                img{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+/*============= End clients css ============*/
+
+/*============= start dark clients css ============*/
+.dark-bg{
+    .client-logo{
+        a{
+            display: block;
+            img{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+/*============= End dark clients css ============*/
+
+.clients-two-area{
+    padding: 135px 0px 150px;
+    .sec-title3{
+        margin-bottom: 0px;
+    }
+    .clients-slider{
+        position: relative;
+        z-index: 2;
+        .client-logo{
+            text-align: center;
+            margin-top: 80px;
+        }
+    }
+}
+
+/*===============blog-area dk-bg-light css ============*/
+.blog-area.dk-bg-light{
+    .blog-2-item{
+        .content{
+            background: #2f3030;
+            transition: all 0.4s linear;
+            h4{
+                color: $l-gray;
+            }
+            h2{
+                color: #999;
+                &:hover{
+                    color: $yellow;
+                }
+            }
+            h5{
+                color: $l-gray;
+                span{
+                    color: $l-gray;
+                }
+            }
+            p{
+                color: $l-gray;
+            }
+        }
+        &:hover{
+            .content{
+                background-color: rgb(47, 48, 48);
+                box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+ 

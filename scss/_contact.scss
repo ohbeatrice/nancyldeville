@@ -1,0 +1,230 @@
+/*============= Start contact area css ============*/
+.contact-form{
+    position: relative;
+    z-index: 1;
+    .form-group{
+        margin-bottom: 22px;
+        label{
+            margin-bottom: 14px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 15px;
+            line-height: 20px;
+            color: #555555;
+        }
+        .form-control{
+            border: 1px solid #e0e0e0;
+            border-radius: 3px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            transition: all 0.25s ease;
+            padding: 6px 25px;
+            height: 60px;
+            color: #555;
+            box-shadow: none;
+            @include placeholder{
+                color: #999;
+            }
+            &:focus{
+                border-color: $yellow;
+            }
+        }
+        textarea{
+            &.form-control{
+                height: 200px;
+                padding-top: 16px;
+            }
+        }
+    }
+    button{
+        margin-top: 29px;
+        background: none;
+        border: 1px solid #e0e0e0;
+        border-radius: 2px;
+        padding: 0px 63px;
+        height: 60px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 15px;
+        color: #999;
+        transition: all 0.4s linear;
+        &:hover,&:focus{
+            border-color: $yellow;
+            color: $yellow;
+        }
+    }
+}
+.contact-submit-progress{
+    font-size: 18px;
+    color: $yellow;
+    padding: 0px 20px;
+}
+.contact-submit-message{
+    font: 500 15px/24px "Open Sans", sans-serif;
+    color: #999;
+    max-width:320px;
+    position: absolute;
+    bottom: 8px;
+    right: 100px;
+    
+}
+.contact-infos{
+    border-top: 1px solid #eeeeee;
+    margin-top: 80px;
+    .header-contact-info{
+        padding-bottom: 0px;
+    }
+}
+/*============= End contact area css ============*/
+
+/*============= start dark contact area css ============*/
+.dark-bg{
+    .contact-form {
+        .form-group{
+            label{
+                color: $gray;
+            } 
+            .form-control{
+                background: #363737;
+                border-color: #363737;
+                color: #999;
+                @include placeholder{
+                    color: #999;
+                }
+            }
+        }
+        button{
+            border-color: #666;
+            &:hover{
+                border-color: $yellow;
+            }
+        }
+    }
+    .contact-infos{
+        border-color: #444;
+    }
+}
+/*============= End dark contact area css ============*/
+
+.contact-form2{
+    .contact-form{
+        text-align: center;
+        .form-group{
+            margin-bottom: 50px;
+            text-align: left;
+            label{
+                color: #0d0d0d;
+            }
+            .form-control{
+                border-color: #ced3d4;
+                @include placeholder{
+                    color: #a8acaf;
+                }
+                &:hover,&:focus{
+                    border-color: $yellow;
+                }
+            }
+            textarea{
+                &.form-control{
+                    height: 320px;
+                    padding: 21px 33px;
+                    resize: none;
+                }
+            }
+        }
+    }
+}
+
+/*=========== Start contact-two-area css ===========*/
+.contact-two-area{
+    padding: 135px 0px 142px;
+    .contact-infos{
+        .header-contact-info{
+            & + .header-contact-info{
+                padding-left: 193px;
+            }
+        }
+    }
+    .contact-form{
+        button{
+            border-color: #e0e0e0;
+            &:hover{
+                border-color: $yellow;
+            }
+        }
+    }
+}
+/*=========== End contact-two-area css ===========*/
+
+.contact-area.dk-bg{
+    .contact-form2{
+        .contact-form{
+            .form-group{
+                .form-control{
+                    background: #363737;
+                    border-color: #363737;
+                    color: #999;
+                    @include placeholder{
+                        color: #999;
+                    }
+                }
+                label {
+                    color: #999;
+                }
+            } 
+            
+//            button{
+//                border-color:#666;
+//                color: #999;
+//                &:hover{
+//                    border-color: $yellow;
+//                    color: $yellow;
+//                    background: transparent;
+//                }
+//            }
+        } 
+    }  
+}
+.dk-bg{
+   .contact-form{
+      button{
+            border-color:#666;
+            color: #999;
+            &:hover{
+                border-color: $yellow;
+                color: $yellow;
+                background: transparent;
+            }
+        } 
+   } 
+}
+.contact-two-area{
+    &.dk-bg-light{
+        button {
+            border-color: #555;
+            &:hover{
+                border-color: $yellow;
+            }
+        }
+    }
+}
+.dk-bg-light{
+    .contact-infos{
+        border-color: #555;
+    }
+    .form-group .form-control{
+        background: #363737;
+        border-color: #363737;
+        color: #999;
+    }
+}
+
+.validation-error{
+ border-color: red!important;
+}
+.validation-valid{
+ border-color: #f1b200!important;
+}
