@@ -472,6 +472,27 @@
     .navbar-header.header-logo{
         display: inline-block;
     }
+	
+	.testimonial-quotes {
+		color:#FFF;
+	}
+	
+	.testimonial-item .title{
+		color:#FFF;
+	}
+	
+	.ex-content h5 {
+		color:#fafafa;
+	}
+	
+	.title {
+		color:#FFF;
+	}
+	
+	p{
+		color:#fafafa;
+	}
+	
     .navbar{
         padding: 0px;
     }
