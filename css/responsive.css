@@ -693,7 +693,28 @@
     .sc-about .about-content p,.sc-skills .skill-content p,.sc-expertise .expertise-media .media-body p,.sc-experience .ex-content p,.sc-awards .award-item p,.sc-profile .col-profile p,.sc-education .ex-content p,.testimonial-item p{
         font-size: 13px;
         line-height: 25px;
+		color: #FFF;
     }
+	
+	.testimonial-quotes {
+		color:#FFF;
+	}
+	
+	.testimonial-item .title{
+		color:#FFF;
+	}
+	
+	.ex-content h5 {
+		color:#fafafa;
+	}
+	
+	.title {
+		color:#FFF;
+	}
+	
+	p{
+		color:#fafafa;
+	}
     .sc-education .ex-content h5{
         margin-bottom: 10px;
     }
